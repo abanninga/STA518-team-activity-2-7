@@ -188,9 +188,9 @@ Get ride of the unused factor levels for country and continent.
 Explore this using the following ways:
 
 1. The base function `droplevels()`,
-2.`fct_drop()` inside `mutate()`,
-2.`fct_drop()` with `mutate_ at()`, and
-2.`fct_drop()` with `mutate_if()`,
+2. `fct_drop()` inside `mutate()`,
+3. `fct_drop()` with `mutate_ at()`, and
+4. `fct_drop()` with `mutate_if()`
 
 ***
 
