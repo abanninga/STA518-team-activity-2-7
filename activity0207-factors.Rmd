@@ -1,0 +1,52 @@
+---
+title: "Activity 2.7 - Exploratory Data Analysis: Taking Control of Your Factors"
+author: "INSERT TEAM NAME HERE"
+date: "INSERT TODAY'S DATE HERE"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+### Load packages
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(gapminder)
+```
+
+
+### Exercise 1
+
+(Type your answer to Exercise 1 here. Add code chunks as needed. Don't forget 
+to label your code chunk. Do not use spaces in code chunk labels.)
+
+### Exercise 2
+
+(Type your answer to Exercise 2 here. Add code chunks as needed. Don't forget 
+to label your code chunk. Do not use spaces in code chunk labels.)
+
+### Exercise 3
+
+...
+
+
+### Exercise 4
+
+...
+
+
+### Exercise 5
+
+...
+
+
+### Exercise 6
+
+...
+
+
+
+### Exercise 7
+
+...
+
