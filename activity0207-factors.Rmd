@@ -96,8 +96,13 @@ ggplot(gap_asia_2007, aes(x = lifeExp, y = country)) + geom_point()
 
 ### Exercise 6
 
-...
-
+```{r six}
+i_gap <- gapminder %>% 
+  filter((country %in% c("Korea, Dem. Rep.", "Korea, Rep.", "Australia")), year > 1999)
+i_gap$country %>%
+  fct_recode("North Korea" = "Korea, Dem. Rep.", "Oz" = "Australia", "South Korea" = "Korea, Rep.") %>% 
+  droplevels()
+```
 
 
 ### Exercise 7
