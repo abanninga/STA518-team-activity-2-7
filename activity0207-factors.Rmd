@@ -29,31 +29,34 @@ The levels function returns the value for each level of continent as a string. T
 The nlevels function returns a count of the unique values for continent.
 The class function returns the type of variable continent is. Continent is a factor (categorical), rather than an integer/numerical.
 
+
 ### Exercise 2
 
-```{r shortcut_count}
-fct_count(gapminder$continent)
-```
+(Type your answer to Exercise 2 here. Add code chunks as needed. Don't forget 
+to label your code chunk. Do not use spaces in code chunk labels.)
 
-```{r recreation-w-dplyr}
-gapminder%>%group_by(continent)%>%count()
-```
 ### Exercise 3
 
-```{r three}
-h_countries <- c("Egypt", "Haiti", "Romania", "Thailand", "Venezuela")
-h_gap <- gapminder %>%
-  filter(country %in% h_countries)
-nlevels(h_gap$country)
-h_gap_droplevels <- h_gap %>% 
-  droplevels()
-nlevels(h_gap_droplevels$country)
-```
-The levels in h_gap still appear to be 142, but it should by 5.
+...
+
 
 ### Exercise 4
+```{r droplevels}
+gapdrop1 <- gapminder %>%
+  filter(pop < 250000) %>%
+  droplevels()
+levels(gapdrop1$country)
+levels(gapdrop1$continent)
+```
 
-...
+``` {r mutate}
+gapdrop2 <- gapminder %>%
+  filter(pop < 250000) %>%
+  mutate(country = fct_drop(country), continent = fct_drop(continent))
+levels(gapdrop2$country)
+levels(gapdrop2$continent)
+```
+
 
 
 ### Exercise 5
