@@ -17,8 +17,18 @@ library(gapminder)
 
 ### Exercise 1
 
-(Type your answer to Exercise 1 here. Add code chunks as needed. Don't forget 
-to label your code chunk. Do not use spaces in code chunk labels.)
+```{r}
+str(gapminder$continent)
+levels(gapminder$continent)
+nlevels(gapminder$continent)
+class(gapminder$continent)
+```
+
+The str function returns each different level of continent as a string, then prints the number it is stored as arbitrarily in R. For example, all rows with 'Africa' as its continent have a 3 stored as the value for continent in R.
+The levels function returns the value for each level of continent as a string. The default ordering of each level seems to be alphabetically. In this case, this makes sense because continent is not ordinal so the order they appear does not matter.
+The nlevels function returns a count of the unique values for continent.
+The class function returns the type of variable continent is. Continent is a factor (categorical), rather than an integer/numerical.
+
 
 ### Exercise 2
 
