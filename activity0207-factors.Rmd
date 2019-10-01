@@ -29,13 +29,15 @@ The levels function returns the value for each level of continent as a string. T
 The nlevels function returns a count of the unique values for continent.
 The class function returns the type of variable continent is. Continent is a factor (categorical), rather than an integer/numerical.
 
-
 ### Exercise 2
 
-```{r two}
+```{r shortcut_count}
 fct_count(gapminder$continent)
 ```
 
+```{r recreation-w-dplyr}
+gapminder%>%group_by(continent)%>%count()
+```
 ### Exercise 3
 
 ```{r three}
