@@ -68,6 +68,21 @@ levels(gapdrop2$country)
 levels(gapdrop2$continent)
 ```
 
+```{r mutate-at}
+gapdrop3 <- gapminder %>%
+  filter(pop < 250000) %>%
+  mutate_at(vars(country, continent),funs(fct_drop))
+levels(gapdrop3$country)
+levels(gapdrop3$continent)
+```
+
+```{r mutate-if}
+gapdrop4 <- gapminder %>%
+  filter(pop < 250000) %>%
+  mutate_if(is.factor,fct_drop)
+levels(gapdrop4$country)
+levels(gapdrop4$continent)
+```
 
 
 ### Exercise 5
