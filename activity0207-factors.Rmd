@@ -86,8 +86,12 @@ levels(gapdrop4$continent)
 
 
 ### Exercise 5
-
-...
+```{r}
+gap_asia_2007 <- gapminder %>% 
+  mutate(country = fct_reorder(gapminder$country, gapminder$lifeExp, .desc = FALSE)) %>%
+  filter(year == 2007, continent == "Asia") 
+ggplot(gap_asia_2007, aes(x = lifeExp, y = country)) + geom_point()
+```
 
 
 ### Exercise 6
