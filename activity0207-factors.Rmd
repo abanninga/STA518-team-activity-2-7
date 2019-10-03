@@ -107,5 +107,17 @@ i_gap$country %>%
 
 ### Exercise 7
 
-...
+``` {r seven}
+df1 <- gapminder %>%
+  filter(country %in% c("United States", "Mexico"), year > 2000) %>%
+  droplevels()
+df2 <- gapminder %>%
+  filter(country %in% c("France", "Germany"), year > 2000) %>%
+  droplevels()
+levels(df1$country)
+levels(df2$country)
+bind_rows(df1, df2)
+rbind(df1, df2)
+```
 
+The output looks the same. However, the 'country' and 'continent' variable is a character variable when bind_rows is used, but a factor variable when rbind is used. 
